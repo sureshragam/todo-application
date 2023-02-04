@@ -1,0 +1,71 @@
+get http://localhost:3000/todos/
+
+###
+
+get http://localhost:3000/todos/5/
+
+###
+get http://localhost:3000/agenda/?date=2021-4-02
+
+###
+post http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+    "id":6,
+    "todo":"checkingPost ",
+    "priority":"MEDIUM",
+    "status":"TO DO",
+    "category":"HOME",
+    "dueDate":"2023-2-4"
+}
+
+###
+
+get http://localhost:3000/todos/?status=TO%20DOSS
+
+###
+
+get http://localhost:3000/todos/?priority=HIGH
+
+###
+
+get http://localhost:3000/todos/?status=IN%20PROGRESS&priority=HIGH
+
+###
+
+get http://localhost:3000/todos/?search_q=Buy
+
+###
+
+get http://localhost:3000/todos/?category=WORK&status=DONE
+
+###
+
+get http://localhost:3000/todos/?category=HOME
+
+###
+
+get http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+
+###
+put http://localhost:3000/todos/9/
+Content-Type: application/json
+
+{
+    "priority":"HIGH"
+}
+
+###
+get http://localhost:3000/agenda/
+
+###
+put http://localhost:3000/todos/9/
+Content-Type: application/json
+
+{
+    "dueDate":"2021-01-12"
+}
+
+###
+DELETE http://localhost:3000/todos/6
